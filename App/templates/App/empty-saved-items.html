@@ -1,0 +1,21 @@
+{% extends 'App/index.html ' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/empty-cart.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="empty-cart">
+    <div class="empty-cart-wrapper">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-text">Your saved item is empty!</div>
+        <p>Browse our categories and discover our best deals!</p>
+        <a style="text-decoration: none;" href="{% url 'home' %}">
+            <button>Start Shopping</button>
+        </a>
+    </div>
+</section>
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}

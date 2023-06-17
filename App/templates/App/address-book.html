@@ -1,0 +1,120 @@
+
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/account-book.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="account-container">
+    <form method="post" class="account-wrapper">
+        {% csrf_token %}
+        <div class="account-box1">
+            <div class="box1-wrapper">
+                <div class="box1-items">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Jumia Account</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Inbox</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-square-pen"></i>
+                    <span>Pending Reviews</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Saved Items</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>Close Account</span>
+                </div>
+                
+                
+            </div>
+            <div class="Logout">
+                <span>Logout</span>
+            </div>
+        </div>
+        <div class="account-box2">
+            <div class="title">
+                Account Overview
+            </div>
+           <div class="address-wrapper">
+               <div class="address-card1">
+                    <div class="card1-items">
+                        <div class="box-wrapper right input-card" id="box_first_name">
+                            <label for="FirstName">First Name</label>
+                           {{form2.first_name}}
+                        </div>
+                        <div class="box-wrapper input-card" id="box_last_name">
+                            <label for="Last Name">Last Name</label>
+                            {{form2.last_name}}
+                        </div>
+                    </div>
+                    <div class="card1-items">
+                       <input type="hidden" name="user" value="{{request.user.id}}">
+                        <div class="box-wrapper right input-card">
+                            <label for="Phone Number">Phone Number</label>
+                           {{form1.phone_number}}
+                        </div>
+                        <div class="box-wrapper input-card" >
+                            <label for="Additional Phone Number">Additional Phone Number</label>
+                            {{form1.additional_phone_number}}
+                        </div>
+                    </div>
+                    
+               </div>
+               <div class="address-card2">
+                <div class="card2-items">
+                    <div class="box2-wrapper input-card">
+                     
+                        <label for="Delivery Address">Delivery Address</label>
+                        {{form1.delivery_address}}
+                    </div>
+                    <div class="box2-wrapper input-card">
+                        <label for="Additional Information">Additional Information</label>
+                        {{form1.additional_info}}
+                    </div>
+                    <div class="card1-items">
+                        <div class="box-wrapper3 right ">
+                            <label for="Country">Country</label>
+                            {{form1.region}}
+                        </div>
+                        <div class="box-wrapper3 ">
+                            <label for="City">City</label>
+                            {{form1.city}}
+                        </div>
+                    </div>
+                    <div class="card1-items">
+                        <div class="box-wrapper3 right ">
+                            <label for="Gender">Gender</label>
+                            {{form1.gender}}
+                        </div>
+                        <div class="box-wrapper3">
+                            <label for="Date of birth">Date of birth</label>
+                           
+                            <input type="date" name="birth_date" id="id_birth_date"">
+                        </div>
+                    </div>
+                    <div class="box-btn"><button>Save</button></div>
+                </div>
+                
+               </div>
+               
+           </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'javascript/address-book.js' %}"></script>
+{% endblock %}

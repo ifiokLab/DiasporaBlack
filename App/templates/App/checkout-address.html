@@ -1,0 +1,110 @@
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/checkout-address.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="check-out">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="check-out-wrapper">
+            <div class="check-out-card1">
+                <div class="account-box2">
+                    <div class="title">
+                        Delivery Address
+                    </div>
+                   <div class="address-wrapper">
+                       <div class="address-card1">
+                            <div class="card1-items">
+                               
+                            </div>
+                            <div class="card1-items">
+                               <input type="hidden" name="user" value="{{request.user.id}}">
+                                <div class="box-wrapper right input-card">
+                                    <label for="Phone Number">Phone Number</label>
+                                   {{form1.phone_number}}
+                                </div>
+                                <div class="box-wrapper input-card" >
+                                    <label for="Additional Phone Number">Additional Phone Number</label>
+                                    {{form1.additional_phone_number}}
+                                </div>
+                            </div>
+                            
+                       </div>
+                       <div class="address-card2">
+                        <div class="card2-items">
+                            <div class="box2-wrapper input-card">
+                             
+                                <label for="Delivery Address">Delivery Address</label>
+                                {{form1.delivery_address}}
+                            </div>
+                            <div class="box2-wrapper input-card">
+                                <label for="Additional Information">Additional Information</label>
+                                {{form1.additional_info}}
+                            </div>
+                            <div class="card1-items">
+                                <div class="box-wrapper3 right ">
+                                    <label for="Country">Country</label>
+                                    {{form1.region}}
+                                </div>
+                                <div class="box-wrapper3 ">
+                                    <label for="City">City</label>
+                                    {{form1.city}}
+                                </div>
+                            </div>
+                            <div class="card1-items">
+                                <div class="box-wrapper3 right ">
+                                    <label for="Gender">Gender</label>
+                                    {{form1.gender}}
+                                </div>
+                                <div class="box-wrapper3">
+                                    <label for="Date of birth">Date of birth</label>
+                                   
+                                    <input type="date" name="birth_date" id="id_birth_date"">
+                                </div>
+                            </div>
+                            <div class="box-btn"><button>Save</button></div>
+                        </div>
+                        
+                       </div>
+                       
+                   </div>
+                </div>
+            </div>
+           
+            <div class="check-out-card2">
+                <div class="cart-box2">
+                    <div class="cart-sum">
+                        <div class="sum-tile">CART SUMMARY</div>
+                        {% for order_item in order.product.all %}
+                        <div class="box2-card">
+                            <img src="{{ order_item.product.main_image.url }}" alt="">
+                            <div class="box2-text">
+                                <div class="product-name">{{ order_item.product.name }}</div>
+                                <div class="product-price">₦{{ order_item.get_final_price  }}</div>
+                                <div class="product-qty">Qty:{{order_item.quantity}}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="mod-cart">
+                            <a href="{% url 'order-summary' %}">Modify Cart</a>
+                        </div>
+                        <div class="sub-total">
+                            <span>Subtotal</span>
+                            <span>₦ {{ order.get_total_price }}</span>
+                        </div>
+                       <div class="btn">
+                        <button type="submit">CHECKOUT ({{ order.get_total_price }})</button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}
+{% block script %}
+<script src="{% static 'javascript/address-book.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,218 @@
+
+.body-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin: 100px 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 400px;
+    height: auto;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    padding: 12px 30px;
+    background-color: #fff;
+    margin: 60px 0;
+}
+ ul{
+    list-style-type: none;
+ }
+li{
+    list-style-type: none;
+    margin: 9px 0;
+}
+.container .header-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+.container .header-form .logo{
+    font-size: 30px;
+    font-family: 'Unna', serif;
+    font-weight: 600;
+    color: #3a183f;
+}
+
+.container .header-form h1{
+    font-weight: 24px;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.container .header-form p{
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+.container .body{
+    display: block;
+    margin: 15px 0;
+}
+
+.container .body .input-card{
+    width: 100%;
+    margin-bottom: 18px;
+    position: relative;
+  
+}
+
+.container .body .input-card input{
+    width: 100%;
+    padding: 10px 14px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    outline:solid #c2c8d0 1px;
+    border-radius: 5px;
+    border: transparent;
+   
+
+}
+
+.container .body .input-card input:focus{
+    outline:solid #3a183f 2px;
+  
+}
+
+.container .body .input-card .eye{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    font-size: 1.1rem;
+    color: #230c22;
+    cursor: pointer;
+}
+.container .body .input-card .eye i{
+    cursor: pointer;
+}
+
+
+.continue-card{
+    display: flex;
+    flex-direction: column;
+}
+.continue-card .forgot{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(0,123,173);
+    text-decoration: none;
+}
+
+.continue-card button{
+    background-color: #3a183f;
+    color: white;
+    border: transparent;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    transition: background-color .25s ease-in-out,box-shadow .25s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.continue-card button:hover{
+    background-color:#230c22;
+}
+
+.continue-card .account{
+    margin-top: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.continue-card .account a{
+    color: rgb(0,123,173);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.or-card{
+    position: relative;
+    margin: 20px 0;
+}
+.or-card .border{
+    border:solid #c2c8d0 0.1px;
+}
+.or-card .text{
+    position: absolute;
+    right: 50%;
+    background-color: #fff;
+    top: -17px;
+    font-size: 14px;
+    padding: 5px; 
+}
+.auth-card .card{
+    margin: 7px 0;
+}
+
+.auth-card  .card a{
+    border:solid #c2c8d0 1px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    color: #1A202C;
+    text-decoration: none;
+    border-radius: 6px;
+    
+}
+.auth-card  .card a:hover{
+    background-color: #dee2e6;
+}
+.auth-card  .card a .icon{
+    margin-right: 30px;
+    font-size: 19px;
+    font-weight: 600;
+    color:#3a183f;
+}
+.auth-card  .card a .text{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+.container .body .input-card label {
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: 1rem;
+
+  }
+
+  
+.container .body .input-card.active label{
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    font-size: 12px;
+    z-index: 5;    
+    background-color: #fff;
+    padding: 0 5px;
+  }
+
+@media screen and (max-width:799px) {
+    .container{
+        margin: 70px 0;
+    }
+}
+
+@media screen and (max-width:499px) {
+    .container{
+       width: 90%;
+    }
+}

@@ -1,0 +1,78 @@
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/saved-items.css' %}">
+{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<section class="account-container">
+    <div class="account-wrapper">
+        <div class="account-box1">
+            <div class="box1-wrapper">
+                <div class="box1-items">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Jumia Account</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Inbox</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-square-pen"></i>
+                    <span>Pending Reviews</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Saved Items</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>Close Account</span>
+                </div>
+                
+                
+            </div>
+            <div class="Logout">
+                <span>Logout</span>
+            </div>
+        </div>
+        <div class="account-box2">
+            <div class="title">
+                Saved Items ({{data|length}})
+            </div>
+            {% for item in data %}
+            <div class="order-wrapper">
+                <div class="img-card">
+                    <img src="{{ item.product.main_image.url }}" alt="">
+                </div>
+                <div class="items-card">
+                    <div class="order-title">{{item.product.name}}</div>
+                    
+                    <div class="date-wrapper">
+                        <span class="date">₦ {{item.product.price}}</span>
+                        <span  class="see"><i style="margin-right: 5px;" class="fa-solid fa-trash"></i>REMOVE</span>
+                    </div>
+                </div>
+                <div class="detail-card" onclick="removeProduct('{{item.product.id}}')">
+                    <div class="see-title"> <i style="margin-right: 5px;" class="fa-solid fa-trash"></i>REMOVE</div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+           
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'javascript/saved-item.js' %}"></script>
+{% endblock %}

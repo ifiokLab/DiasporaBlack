@@ -1,0 +1,335 @@
+
+.check-out{
+    margin: 100px 0;
+    padding: 3rem 9% 0 9%
+}
+.check-out form{
+    margin: 0;
+}
+.check-out-wrapper{
+    display: flex;
+    width: 100%;
+}
+.check-out-card1{
+    flex-grow: 1;
+}
+.check-out-card2{
+    min-width: 300px;
+    margin-left: 20px;
+}
+.check1,.check2{
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    padding-bottom: 20px;
+}
+.check1-header{
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6px;
+    font-size: .9rem;
+    font-weight: 800;
+  
+}
+
+.check1-box{
+    margin:15px 0 15px 25px;
+}
+.check1-name{
+    font-size: .8rem;
+    font-weight: 600;
+    
+}
+.check1-address,.check1-ph{
+    font-size: .8rem;
+    font-weight: 600;
+    color: grey;
+    margin: 6px 0;
+}
+.check1-header i{
+    color: #6dbd28;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+.check1-header a{
+    text-decoration: none;
+    color: #f68b1e;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.check1-box form{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   margin-left: -5px;
+}
+#id_delivery_method,#id_payment_option{
+    font-size: .9rem;
+   
+}
+#id_delivery_method div, #id_payment_option div{
+   margin: 4px;
+}
+#id_delivery_method input, #id_payment_option input{
+    color: #f68b1e;
+    margin-right: 12px;
+}
+
+
+.cart-box2{
+    width: 300px;
+   
+}
+
+.cart-box2 .cart-sum{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding:14px 0 ;
+}
+.cart-box2 .sum-tile{
+    color: #276076;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+}
+
+.cart-box2 .sub-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 14px;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.cart-box2 .btn{
+    display: flex;
+    margin: 13px 14px 0 14px;
+}
+.cart-box2 button{
+    background-color: #f68b1e;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    border: transparent;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    width: 90%;
+    flex-grow: 1;
+}
+
+.box2-card{
+    display: flex;
+    padding: 0 9px;
+}
+.box2-card img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+   
+}
+.box2-card .box2-text{
+    padding: 9px;
+    font-size: .8rem;
+   
+ 
+}
+.box2-text .product-price{
+    color: #f68b1e;
+    font-weight: 800;
+    margin: 5px 0;
+    font-size: .9rem;
+}
+.mod-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.mod-cart a{
+    color: #f68b1e;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.box2-text .product-qty{
+    color: gray;
+}
+
+.account-box2{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    flex-grow: 1;
+    height: 100%;
+    padding: 0 20px;
+   
+}
+
+.account-box2 .title{
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 900;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+    margin-bottom: 10px;
+}
+
+
+
+.card1-items{
+    display: flex;
+    margin-bottom: 20px;
+}
+.card1-items .input-card{
+    margin-top: 10px;
+    flex-grow: 1;
+    
+    border-radius: 6px;
+    padding: 2px;
+    position: relative;
+    border: solid 1px  #a3a3a6;
+}
+.card1-items .input-card input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none; 
+}
+.card1-items .box-wrapper3{
+    margin-top: 10px;
+    flex-grow: 1;
+    
+    border-radius: 6px;
+    position: relative;
+    border: solid 1px  #a3a3a6;
+    padding: 2px;
+   
+}
+.card1-items .box-wrapper3 select{
+    width: 100%;
+    border: transparent;
+    outline: transparent;
+    padding: 6px;
+}
+
+.right{
+    margin-right: 20px;
+}
+.box-wrapper3 input{
+    width: 100%;
+    padding: 6px;
+    
+    border: none;
+    outline: none; 
+}
+.box-wrapper3 label{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: .7rem;
+    
+    background-color: white;
+}
+
+
+.address-card2 .card2-items{
+    width: 100%;
+    padding: 10px 0 ;
+ }
+
+ 
+.box2-wrapper{
+    margin-bottom: 10px;
+    border: solid 1px #a3a3a6;
+    border-radius: 6px;
+    padding: 2px;
+    position: relative;
+ 
+}
+.box2-wrapper input{
+    width: 100%;
+    width: 100%;
+    padding: 6px;
+   
+    border: none;
+    outline: none;
+    
+}
+.box-btn{
+    text-align: right;
+}
+.box-btn button{
+    width: auto;
+    padding: 14px;
+    text-align: center;
+    background-color: #f68b1e;
+    color: white;
+    border: transparent;
+    border-radius: 6px;
+    font-weight: 900;
+    
+    margin-bottom: 40px;
+}
+
+
+.input-card label {
+    position: absolute;
+   top: 25%;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: .7rem;
+   
+    background-color: white;
+
+  }
+
+  .input-card.active{
+    border: solid #f68b1e 1px;
+  } 
+.input-card.active label{
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    font-size: 12px;
+    z-index: 5;    
+    background-color: #fff;
+    padding: 0 5px;
+  }
+@media screen and (max-width:899px) {
+    .check-out-wrapper{
+        flex-direction: column;
+    }
+    .check-out-card2{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+        
+    .cart-box2{
+      width: unset;
+    
+    }
+
+    .box2-card img{
+        height: 100px;
+        width: 200px;
+        object-fit: fill;
+    
+    }
+    .box2-card .box2-text{
+       flex-grow: 1;
+    }
+
+    
+    .card1-items{
+        flex-direction: column;
+    }
+        
+    .right{
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+}

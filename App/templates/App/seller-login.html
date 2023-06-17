@@ -1,0 +1,79 @@
+{% extends 'App/index.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="body-wrapper">
+    <div class="container">
+     
+        <div class="header-form">
+           <!-- <div class="logo">DiasporaBlack</div>-->
+            <h1>Welcome</h1>
+            <p class="text">Sign up to DiasporaBlack</p>
+        </div>
+    
+        <form action="" method="POST" class="body">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+            <p style="color: red;font-size: 1.1rem;">{{form.non_field_errors}}</p>
+            {% endif %}
+            <div class="input-card">
+                {{form.username}}
+               
+                <label for="">Email</label>
+            </div>
+             <div class="input-card">
+                {{form.password}}
+               <!-- <div class="eye" onclick="show2()"> <i id="eye1" class="fa-regular fa-eye"></i></div>-->
+                <label for="">Password</label>
+             </div>
+           
+    
+            <div class="continue-card">
+               <a href="" class="forgot">
+                <p>Forgot password?</p>
+               </a>
+               <button type="submit">Continue</button>
+               <div class="account">
+               Don't have an account? <a href="{% url 'seller-signup' %}">Signup</a>
+               </div>
+            </div>
+    
+            <div class="or-card">
+                <div class="border"></div>
+                <div class="text">OR</div>
+            </div>
+        </form>
+    
+        <div class="auth-card">
+            <div class="card">
+                <a href="">
+                   <div class="icon"><i class="fa-brands fa-google"></i></div>
+                   <div class="text">Continue with Google</div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="text">Continue with Facebook</div>
+                 </a>
+            </div>
+            <div class="card">
+                <a href="">
+                    <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="text">Continue with Twitter</div>
+                 </a>
+            </div>
+        </div>
+    
+    </div>
+    <div id="overlay" onclick="Modal()"></div>
+</div>
+{% endblock %}
+{% block script %}
+<script src="{% static 'javascript/signup.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,209 @@
+{% extends 'App/index.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!--hero image begins-->
+    <section class="hero-image">
+        <div class="hero-categories">
+            <div class="categories-wrapper">
+                <div class="items">
+                    <!--<i class="fa-solid fa-apple-whole"></i>-->
+                    <span>Active Life</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Arts & Entertainment</span>
+                </div>
+                <div class="items">
+                 
+                    <span>Automotive</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Phone & Tablets</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Beauty & Spas</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Education</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Event Planning & Services</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Financial Services</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Food</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Health & Medical</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Home Services</span>
+                </div>
+                <div class="items">
+                   
+                    <span>Hotels & Travel</span>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="hero-container swiper">
+           <div class="hero-wrapper swiper-wrapper">
+           
+                
+                <div class="swiper-slide">
+                    <img src="{% static 'images/slide1.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/TVsub_MallDesktop.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/Nestle_slider_FS.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/Homepage-(712x384.png' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                   <img src="{% static 'images/Binatone-Slider.gif' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/Brand-day-slider-live-now.gif' %}" alt="">
+                 </div>
+               
+                
+           </div>
+           <div class="swiper-pagination"></div>
+
+            
+           <!-- <div class="swiper-pagination">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>-->
+        </div>
+        <div class='ads-container'>
+            <div class='ads1'>
+              <img src="{% static 'images/ads1.png' %}" alt="">
+            </div>
+            <div class='ads2'>
+           <img src="{% static 'images/ads2.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="slider">
+        <div class="slider-wrapper" id="gallery-slider" >
+            <div class="gallery-card">
+                <img src="{% static 'images/cat1.png' %}" alt='' >
+                <div class='title'>Phones & Tablets</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat2.jpg' %}" alt='' >
+                <div class='title'>Television</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat3.png' %}" alt='' >
+                <div class='title'>Groceries</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat4.jpg' %}" alt='' >
+                <div class='title'>Refigerators</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat5.png' %}" alt='' >
+                <div class='title'>Electronics</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat6.png' %}" alt='' >
+                <div class='title'>Watches</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat7.png' %}" alt='' >
+                <div class='title'>Mens Sneakers</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat8.png' %}" alt='' >
+                <div class='title'>Health & Beauty</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat9.png' %}" alt='' >
+                <div class='title'>Mobile Accesories</div>
+            </div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat10.png' %}" alt='' >
+                <div class='title'>Portable Power</div>
+            </div>
+            <div class="gallery-card"> 
+                <img src="{% static 'images/cat11.png' %}" alt='' >
+                <div class='title'>Phones & Tablets</div></div>
+            <div class="gallery-card">
+                <img src="{% static 'images/cat2.jpg' %}" alt='' >
+                <div class='title'>Television</div>
+            </div>
+        </div>
+        <button id="prev-button" class="prev-button" ><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="next-button" class="next-button" ><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+   
+    <section class="product-container">
+        <div class="product-categories">
+            <div class="top-deal-card">
+                <div class="top-deal-1">Top Deal | </div>
+                <div class="top-deal-2"> Phones & Tablets</div>
+            </div>
+
+            <div class="see-all">See all<i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+        <div class="product-wrapper">
+            {% csrf_token %}
+            {% for data in product %}
+           
+            {% if data.category.title == "Phones & Tablets" %}
+            <a class='product-card' href="{% url 'product_detail' data.id %}">
+                <img src="{{data.main_image.url}}" alt="">
+                <div class="text">
+                    <div class="headings">{{data.name}}</div>
+                    <div class="price-card">
+                        <div class="price">₦{{data.price}}</div>
+                        <div class="discount">₦{{data.discount_price}}</div>
+                    </div>
+                </div>
+               
+            </a>
+            {% endif %}
+            {% endfor %}
+           
+        </div>
+       
+    </section>
+   
+  
+
+{% endblock %}
+{% block script %}
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="{% static 'javascript/home.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,580 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DiasporaBlack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>-->
+
+    
+
+    
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div class="main-body-wrapper">
+        <header class="header">
+            <div class='top-nav' >
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Active Life</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class ="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Arts & Entertainment</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Automotive</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Beauty & Spas</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Education</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>Event Planning & Services</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container' id='more-hover'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class='items'>
+                    <div class='text-container'>
+                        <span class='title'>More</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class='hover-container' id='more-hover'>
+                         <div class='wrapper'>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            <div class='box '>
+                            <i class="fa-solid fa-truck"></i>
+                                <span class='text'>Delivery</span>
+                            </div>
+                            <div class='box second'>
+                            <i class="fa-solid fa-calendar-days"></i>
+                                <span class='text'>Reservation</span>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+               
+               
+              
+            </div>
+            <nav class="nav">
+                <a href="{% url 'home' %}" class="logo">DiasporaBlack</a>
+                <form action="" id="search">
+                    <div class="find">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search, Product, Brand and Categories">
+                    </div>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <div class="nav-items">
+                    <div class="user-card nav-card" onclick="show1()">
+                        <div class="user-items">
+                             <i class="fa-regular fa-user"></i>
+                            {% if user.is_authenticated %}
+                            <span>Hi, {{user}}</span>
+                            {% else %}
+                            <span>Hello,Guest</span>
+                            {% endif %}
+                             <i id="user-chev1" class="fa-solid fa-chevron-down"></i>
+                             <!--<i class="fa-solid fa-chevron-up"></i>-->
+                        </div>
+                        <div id="extra-nav-items" class="extra-nav-items">
+                         <div class="extra-btn-1">
+                            <a href="{% url 'customer_login' %}">Customer Login</a>
+                         </div>
+                         <div class="extra-btn-1">
+                            <a href="{% url 'seller-login' %}">SaleCenter</a>  
+                         </div>
+                         {% if request.user.is_authenticated %}
+                         <a href="{% url 'customer-account' %}" class="extra-icon">
+                             <i class="fa-regular fa-user"></i>
+                             <span>My Account</span>
+                         </a>
+                         <a href="{% url 'save-later' %}" class="extra-icon">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Saved items</span>
+                        </a>
+                         {% endif %}
+                         <div class="extra-icon">
+                             <i class="fa-solid fa-bag-shopping"></i>
+                             <span>Orders</span>
+                         </div>
+                        {% if user.is_authenticated %}
+                        <div class="extra-logout">
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </div>
+                        {% else %}
+                        <div class="extra-logout">
+                            <a href="{% url 'customer_signup' %}">Signup</a>
+                        </div>
+                        {% endif %}
+                        </div>
+                     </div>
+    
+                     <div class="help-card nav-card" onclick="show2()">
+                        <div class="help-items">
+                            <i class="fa-regular fa-circle-question"></i>
+                             <span>Help</span>
+                             <i id="user-chev2" class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div id="extra-nav-items2" class="extra-nav-items">
+                            <div class="extra-icon">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <span>Help Center</span>
+                            </div>
+                            <div class="extra-icon">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Place & track Order</span>
+                            </div>
+                        </div>
+                     </div>
+                     
+                     <div class="cart-card nav-card">
+                        <a href="{% url 'order-summary' %}" class="cart-items">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Cart</span>
+                            
+                        </a>
+                     </div>
+                </div>
+            </nav>
+        </header>
+        <!--mobile header-->
+        <header class="mobile-header" id="mobile-header">
+            <div class="mobile-nav-1 mobile-items">
+                <div class="mobile-nav-card1">
+                    <i class="fa-solid fa-bars" onclick="ToggleMobileNavigation()"></i>
+                   <span>DiasporaBlack</span>
+                   
+                </div>
+    
+                <div class="mobile-nav-card2">
+                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            
+            <form action="" class="mobile-nav-2 mobile-items">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search, Product, Brand and Categories">
+            </form>
+           
+        </header>
+        <!--sidebar starts-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span> DiasporaBlack</span>
+                   <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="close-icon">
+                    <i class="fa-solid fa-times" onclick="ToggleMobileNavigation()"></i>
+                </div>
+            </div>
+    
+            <div class="sidebar-nav">
+                <a href="">
+                    <div class="nav-headings">
+                        <h2>MY DiasporaBlack ACCOUNT</h2>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        
+                    </div>
+                </a>
+                <div class="items">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Saved items</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </div>
+            </div>
+    
+            <div class="sidebar-nav">
+                <a href="">
+                    <div class="nav-headings">
+                        <h2>OUR CATEGORIES</h2>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        
+                    </div>
+                </a>
+                <div class="items">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Supermarket</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Health & Beauty</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Home & Office</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Phone & Tablets</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Computing</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Electronics</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Women's Fashion</span>
+                </div>
+                <div class="items">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Men's Fashion</span>
+                </div>
+            </div>
+    
+            <div class="sidebar-nav">
+                <a href="">
+                    <div class="nav-headings">
+                        <h2>CUSTOMER CARE</h2>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        
+                    </div>
+                </a>
+                <div class="items">
+                    <span>Sell on DiasporaBlack</span>
+                </div>
+                <div class="items">
+                    <span>Contact Us</span>
+                </div>
+                <div class="items">
+                    <span>Help Center</span>
+                </div>
+            </div>
+        </div>
+    
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-card">
+                <div class="f-headline f-item">LET US HELP YOU</div>
+                <div class="f-item">
+                    <a href="">Help Center</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="f-item">
+                    <a href="">How to shop on DiasporaBlack?</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Delivery options and timelines</a>
+                </div>
+                <div class="f-item">
+                    <a href="">How to return a product on DiasporaBlack?</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Corporate and bulk purchases</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Report a Product</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Ship your package anywhere in Nigeria</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Dispute Resolution Policy</a>
+                </div>
+            </div>
+            <div class="footer-card">
+                <div class="f-headline f-item">ABOUT DiasporaBlack</div>
+                <div class="f-item">
+                    <a href="">About us</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="f-item">
+                    <a href="">DiasporaBlack careers</a>
+                </div>
+                <div class="f-item">
+                    <a href="">DiasporaBlack Express</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Terms and Conditions</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Privacy and Cookie Notice</a>
+                </div>
+                <div class="f-item">
+                    <a href="">DiasporaBlack Prime</a>
+                </div>
+                <div class="f-item">
+                    <a href="">DiasporaBlack Prime</a>
+                </div>
+                <div class="f-item">
+                    <a href="">DiasporaBlack Global</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Flash Sales</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Brand Festival 2022</a>
+                </div>
+            </div>
+            <div class="footer-card">
+                <div class="f-headline f-item">MAKE MONEY WITH DiasporaBlack</div>
+                <div class="f-item">
+                    <a href="">Sell on DiasporaBlack</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Become a Sales Consultant</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Become a DiasporaBlack Vendor Service Provider</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Become a Logistics Service Partner</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Join the DiasporaBlack DA Academy</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Join the DiasporaBlack KOL Program</a>
+                </div>
+                
+            </div>
+            <div class="footer-card">
+                <div class="f-headline ">DiasporaBlack INTERNATIONAL</div>
+                <div class="f-item">
+                    <a href="">Algeria</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Egypt</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Ghana</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Tunisia</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Uganda</a>
+                </div>
+                <div class="f-item">
+                    <a href="">South Africa</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Ivory Coast</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Senegal</a>
+                </div>
+                <div class="f-item">
+                    <a href="">Morocco</a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <div class="message-wrapper">
+        {% for message in messages %}
+        <div class="message {% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% endif %}">
+            {% if message.tags == 'success' %}
+            <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+            {% else %}
+            <div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+            {% endif %}
+            <div class="info"> {{ message }}</div>
+        </div>
+        {% endfor %}
+    </div>
+  
+</body>
+<script src="{% static 'javascript/index.js' %}"></script>
+
+{% block script %}
+
+{% endblock %}
+</html>

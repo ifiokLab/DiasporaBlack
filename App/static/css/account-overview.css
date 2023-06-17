@@ -1,0 +1,136 @@
+
+.account-container{
+    margin-top: 140px;
+    margin-bottom: 50px;
+    padding: 14px 6%;
+   
+}
+
+.account-wrapper{
+    display: flex;
+}
+.account-wrapper .account-box1{
+    min-width: 240px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    margin-right: 20px;
+}
+.account-wrapper .account-box2{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    flex-grow: 1;
+    height: 100%;
+}
+.account-box1 .box1-wrapper{
+    padding: 10px 18px;
+}
+.box1-wrapper .box1-items{
+    padding: 8px;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.box1-wrapper .box1-items:hover{
+    background-color: #c7c7cd;
+}
+
+.account-box1 .Logout{
+    text-align: center;
+    padding: 7px 0;
+    font-size: .8rem;
+    border-top:  rgb(0 0 0 / 12%) solid 0.7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.account-box1 .Logout:hover{
+    color: #f68b1e;
+   
+}
+.box1-wrapper .box1-items i{
+    margin-right: 10px;
+}
+
+.account-box2 .title{
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+    margin-bottom: 10px;
+}
+.account-detail-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.account-detail-wrapper .detail-box1{
+    border:  rgb(0 0 0 / 12%) solid 0.7px;
+    flex-grow: 1;
+    
+    margin: 0 8px 20px 20px;
+
+   
+  
+}
+
+.account-detail-wrapper .detail-box2{
+    flex-grow: 1;
+    border:  rgb(0 0 0 / 12%) solid 0.7px;
+    margin: 0 20px 20px 8px;
+}
+
+.detail-box1 .title{
+    padding: 6px 10px;
+    font-size: .9rem;
+    font-weight: 600;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+   
+}
+.detail-box1 .description{
+    padding:  0 15px;
+    font-size: .8rem;
+   
+}
+.detail-box1 .email{
+    color: #c7c7cd;
+    margin-top: 6px;
+}
+.detail-box2 .title2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: .9rem;
+    font-weight: 600;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+}
+.detail-box2 .description2{
+    padding: 0 12px;
+    margin-bottom: 20px;
+    font-size: .8rem;
+}
+.detail-box2 .description2 p{
+    font-weight: 600;
+}
+
+@media screen and (max-width:900px) {
+    
+    
+    .account-detail-wrapper{
+        flex-direction: column;
+    }
+    .account-detail-wrapper .detail-box1{
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      
+    }
+    .account-container{
+        margin-top: 120px;
+    }
+    
+    .account-wrapper{
+        flex-direction: column;
+    }
+    .account-wrapper .account-box1{
+        min-width: 240px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

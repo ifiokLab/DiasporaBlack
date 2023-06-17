@@ -1,0 +1,92 @@
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/check-out.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="check-out">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="check-out-wrapper">
+            <div class="check-out-card1">
+                <div class="check1">
+                    <div class="check1-header">
+                       <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>1. ADDRESS DETAILS</span>
+                       </div>
+                       <a href="{% url 'create-customer-address' %}">Change</a>
+                    </div>
+                    <div class="check1-box">
+                        <div class="check1-name">{{account.user.first_name}} {{account.user.last_name}}</div>
+                        <div class="check1-address">{{account.delivery_address}}, {{account.region}}</div>
+                        <div class="check1-ph">{{account.phone_number}}</div> 
+                    </div>
+                </div>
+                <div class="check2">
+                    <div class="check1-header">
+                        <div>
+                         <i class="fa-solid fa-circle-check"></i>
+                         <span>2. DELIVERY METHOD</span>
+                        </div>
+                        <a href=""></a>
+                    </div>
+                    <div class="check1-box">
+                        <div class="check1-name">How do you want your order delivered?</div>
+                        <form action="">
+                           {{form.delivery_method}}
+                            
+                        </form>
+                       
+                    </div>
+                </div>
+    
+                <div class="check2">
+                    <div class="check1-header">
+                        <div>
+                         <i class="fa-solid fa-circle-check"></i>
+                         <span>3. PAYMENT METHOD</span>
+                        </div>
+                        <a href=""></a>
+                    </div>
+                    <div class="check1-box">
+                        <div class="check1-name">Pay with Cards, Bank Transfer or USSD</div>
+                           {{form.payment_option}}
+                       
+                    </div>
+                </div>
+            </div>
+           
+            <div class="check-out-card2">
+                <div class="cart-box2">
+                    <div class="cart-sum">
+                        <div class="sum-tile">CART SUMMARY</div>
+                        {% for order_item in order.product.all %}
+                        <div class="box2-card">
+                            <img src="{{ order_item.product.main_image.url }}" alt="">
+                            <div class="box2-text">
+                                <div class="product-name">{{ order_item.product.name }}</div>
+                                <div class="product-price">₦{{ order_item.get_final_price  }}</div>
+                                <div class="product-qty">Qty:{{order_item.quantity}}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="mod-cart">
+                            <a href="{% url 'order-summary' %}">Modify Cart</a>
+                        </div>
+                        <div class="sub-total">
+                            <span>Subtotal</span>
+                            <span>₦ {{ order.get_total_price }}</span>
+                        </div>
+                       <div class="btn">
+                        <button type="submit">CHECKOUT ({{ order.get_total_price }})</button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+{% endblock %}

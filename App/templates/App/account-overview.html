@@ -1,0 +1,87 @@
+{% extends 'App/index.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/account-overview.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="account-container">
+    <div class="account-wrapper">
+        <div class="account-box1">
+            <div class="box1-wrapper">
+                <div class="box1-items">
+                    <i class="fa-regular fa-user"></i>
+                    <span>My Jumia Account</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Inbox</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-square-pen"></i>
+                    <span>Pending Reviews</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Saved Items</span>
+                </div>
+                <div class="box1-items">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>Close Account</span>
+                </div>
+                
+                
+            </div>
+            <div class="Logout">
+                <span>Logout</span>
+            </div>
+        </div>
+        <div class="account-box2">
+            <div class="title">
+                Account Overview
+            </div>
+            <div class="account-detail-wrapper">
+                <div class="detail-box1">
+                    <div class="title">
+                        ACCOUNT DETAILS
+                    </div>
+                    <div class="description">
+                        <div class="name">{{customer.first_name}} {{customer.last_name}}</div>
+                        <div class="email">{{customer.email}}</div>
+                    </div>
+                </div>
+                <div class="detail-box2">
+                    <div class="title2">
+                        <div>ADDRESS BOOK</div>
+                        <a href="{% url 'create-customer-address' %}"><i class="fa-solid fa-pencil"></i></a>
+                    </div>
+                    <div class="description2">
+                        <p>Your default shipping address:</p>
+                        {% if account %}
+                        <div >{{account.user.first_name}} {{account.user.last_name}}</div>
+                        <div>{{account.delivery_address}}</div>
+                        <div>{{account.region}}, {{account.city}}</div>
+                        <div>+234 8155557481</div>
+                        {% else %}
+                        <div class="empty">
+                            <span> No default shipping address available. </span> <br>
+                             <a href="{% url 'create-customer-address' %}">ADD DEFAULT ADDRESS</a>
+                         </div>
+                        {% endif %}
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

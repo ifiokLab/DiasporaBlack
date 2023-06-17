@@ -1,0 +1,200 @@
+
+.account-container{
+    margin-top: 140px;
+    margin-bottom: 40px;
+    padding: 14px 6%;
+   
+}
+
+.account-wrapper{
+    display: flex;
+}
+.account-wrapper .account-box1{
+    min-width: 240px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    margin-right: 20px;
+   
+    align-self: baseline;
+}
+.account-wrapper .account-box2{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    flex-grow: 1;
+    height: 100%;
+    padding: 0 20px;
+   
+}
+.account-box1 .box1-wrapper{
+    padding: 20px;
+}
+.box1-wrapper .box1-items{
+    margin: 6px 0;
+}
+.account-box1 .Logout{
+    text-align: center;
+    padding: 10px 0;
+    border-top:  rgb(0 0 0 / 12%) solid 0.7px;
+    
+}
+.box1-wrapper .box1-items i{
+    font-size: 17px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.account-box2 .title{
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 900;
+    border-bottom:  rgb(0 0 0 / 12%) solid 0.7px;
+    margin-bottom: 10px;
+}
+
+.card1-items{
+    display: flex;
+    margin-bottom: 20px;
+}
+.card1-items .input-card{
+    margin-top: 10px;
+    flex-grow: 1;
+    
+    border-radius: 6px;
+    padding: 2px;
+    position: relative;
+    border: solid 1px  #a3a3a6;
+}
+.card1-items .input-card input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none; 
+}
+.card1-items .box-wrapper3{
+    margin-top: 10px;
+    flex-grow: 1;
+    
+    border-radius: 6px;
+    position: relative;
+    border: solid 1px  #a3a3a6;
+    padding: 2px;
+   
+}
+.card1-items .box-wrapper3 select{
+    width: 100%;
+    border: transparent;
+    outline: transparent;
+    padding: 6px;
+}
+
+.right{
+    margin-right: 20px;
+}
+.box-wrapper3 input{
+    width: 100%;
+    padding: 6px;
+    
+    border: none;
+    outline: none; 
+}
+.box-wrapper3 label{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: .7rem;
+    
+    background-color: white;
+}
+
+
+.address-card2 .card2-items{
+   width: 100%;
+   padding: 10px 0 ;
+  
+}
+.box2-wrapper{
+    margin-bottom: 10px;
+    border: solid 1px #a3a3a6;
+    border-radius: 6px;
+    padding: 2px;
+    position: relative;
+ 
+}
+.box2-wrapper input{
+    width: 100%;
+    width: 100%;
+    padding: 6px;
+   
+    border: none;
+    outline: none;
+    
+}
+.box-btn{
+    text-align: right;
+}
+.box-btn button{
+    width: auto;
+    padding: 14px;
+    text-align: center;
+    background-color: #f68b1e;
+    color: white;
+    border: transparent;
+    border-radius: 6px;
+    font-weight: 900;
+    
+    margin-bottom: 40px;
+}
+
+
+.input-card label {
+    position: absolute;
+   top: 25%;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    font-size: .7rem;
+   
+    background-color: white;
+
+  }
+
+  .input-card.active{
+    border: solid #f68b1e 1px;
+  } 
+.input-card.active label{
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    font-size: 12px;
+    z-index: 5;    
+    background-color: #fff;
+    padding: 0 5px;
+  }
+@media screen and (max-width:900px) {
+    
+  
+    .card1-items{
+        flex-direction: column;
+    }
+        
+    .right{
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+   
+}
+
+@media screen and (max-width:699px) {
+   
+    .account-wrapper{
+        flex-direction: column;
+    }
+   
+        
+    .account-wrapper .account-box1{
+        margin:30px 0 ;
+        min-width: 100%;
+
+    }
+    
+}
